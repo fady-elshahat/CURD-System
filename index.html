@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+     <html lang="en">
+          <head>
+               <meta charset="UTF-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>CURD Add Product</title>
+               <link rel="stylesheet" href="bootstrap.min.css">
+          </head>
+          <body>
+               <section class="w-75 m-auto py-5">
+                    <h1 class="text-center py-3">CURD System</h1>
+                    <div class="form-group my-4">
+                         <input type="text" placeholder="Product Name" id="productName" class="form-control mb-3">
+                    </div>
+                    <div class="form-group  my-4">
+                         <input type="number" placeholder="Product Price" id="productPrice" class="form-control mb-3">
+                    </div>
+                    <div class="form-group  my-4">
+                         <input type="text" placeholder="Product Category" id="productCategory" class="form-control mb-3">
+                    </div>
+                    <div class="form-group  my-4">
+                         <input type="text" placeholder="Product Desc" id="productDesc" class="form-control mb-3">
+                    </div>
+                    <div class="alert-danger alert w-50 mx-auto my-4" id="alert" ></div>
+                    <button id="btn-main" class="btn btn-info" onclick="addProduct()">Add Product</button>
+                    <button id="btn-updeta" class="btn btn-info" onclick="saveUpdeta()">Updeta</button>
+               </section>
+               <section class="w-75 m-auto text-center">
+                    <input type="text" id="search" class="form-control my-5 w-50 mx-auto" placeholder="Search Product" onkeyup="searchItem(this.value)">
+                    <table class="table">
+                         <thead>
+                              <th>Index</th>
+                              <th>productName</th>
+                              <th>productPrice</th>
+                              <th>productCategory</th>
+                              <th>productDesc</th>
+                              <th>Update</th>
+                              <th>Delete</th>
+                         </thead>
+                         <tbody  id="tableBody">
+                         </tbody>
+                    </table>
+               </section>
+               <script src="main.js"></script>
+          </body>
+     </html>
